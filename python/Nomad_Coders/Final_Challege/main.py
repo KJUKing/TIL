@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from extractors.remoteok import extract_remoteok_jobs
-from extractors.wwr import extract_wwr_jobs
+from extractors.wwr import extract_wwr_jobs          #extractor 폴더에있는 remoteok와 wwr의 api를 가져옴
 
-app = Flask("JobScrapper")
+app = Flask("JobScrapper") #플라스크 서버를 이용하여 사이트 구축
 
 db = {
 
@@ -14,7 +14,7 @@ def home():
 
 @app.route("/search")
 def search():
-  keyword = request.args.get("keyword")
+  keyword = request.args.get("keyword") # 키워드에 맞춰 api사이트의 검색결과를 가져옴
   if keyword in db:
     jobs = db[keyword]
   else:
