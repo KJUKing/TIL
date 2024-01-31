@@ -108,10 +108,8 @@
             -Secure : 쿠키는 http, https를 구분하지 않고 전송, 적용시 https에만 전송
             -HttpOnly : XSS 공격 방지, 자바스크립트에서 접근불가
             -SameSite : XSRF 공격 방지, 요청 도메인과 쿠키에 설정된 도메인 이같은 경우에만 쿠키 전송
-   
-    
 
-    
+
 
     
 
